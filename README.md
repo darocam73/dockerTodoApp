@@ -6,9 +6,14 @@ The back-end stores locally all the information in a mySQL database.
 
 ## How to run this app?
 
-- Clone this repo.
-- At the root of the project (where docker-compose.yaml is located) run the next command:
+### Clone this repo
+
+### At the root of the project (where docker-compose.yaml is located) run the next command
+
 `docker-compose up --build`
-- Open `localhost:3000` in your browser
+
+### Runs the app in the development mode.\
+
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 You should see a TODO application, in which you can view, create, edit and remove tasks.
