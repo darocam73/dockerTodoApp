@@ -1,0 +1,48 @@
+version: '3'
+
+services:
+  mysqldb:
+    image: mysql
+    restart: always
+    env_file: ./.env
+    environment:
+      MYSQL_DATABASE: $MYSQL_DATABASE
+      MYSQL_USER: $MYSQL_USER
+      MYSQL_PASSWORD: $MYSQL_PASSWORD
+    ports:
+      - $MYSQL_LOCAL_PORT:$MYSQL_DOCKER_PORT
+    volumes:
+      - db-data:/var/lib/mysql
+
+  back:
+    build:
+      context: .
+      dockerfile: ./node-back/Dockerfile
+    image: node-be-app
+    env_file: ./.env
+    ports:
+      - $NODE_LOCAL_PORT:$NODE_DOCKER_PORT
+    volumes:
+      - ./node-back:/node-back
+    depends_on:
+      - mysqldb
+    stdin_open: true
+    tty: true
+
+  front:
+    build:
+      context: .
+      dockerfile: ./react-front/Dockerfile
+    image: react-front-app
+    env_file: ./.env
+    ports:
+      - $NODE_LOCAL_PORT_FRONT:$NODE_DOCKER_PORT_FRONT
+    volumes:
+      - ./react-front:/react-front
+    depends_on:
+      - back
+    stdin_open: true
+    tty: true
+
+volumes:
+  db-data:
