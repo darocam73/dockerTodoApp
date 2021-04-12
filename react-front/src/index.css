@@ -1,0 +1,11 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #89d4cf;
+  background-image: linear-gradient(315deg, #89d4cf 0%, #6e45e1 74%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

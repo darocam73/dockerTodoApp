@@ -1,0 +1,22 @@
+@import '../../styles/scss/colors.scss';
+
+.form-container {
+  width: 100%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: $form-background;
+  box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.35);
+
+  .title-container {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+}

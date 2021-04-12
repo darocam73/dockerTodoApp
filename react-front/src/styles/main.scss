@@ -1,0 +1,18 @@
+// Required files to use bootstrap grid
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/utilities';
+@import '~bootstrap/scss/type';
+@import './scss/fonts';
+
+#root {
+  @include latoThin();
+  * {
+    box-sizing: border-box;
+  }
+}
+

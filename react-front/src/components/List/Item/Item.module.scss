@@ -1,0 +1,62 @@
+@import '../../../styles/scss/colors.scss';
+
+.item-container {
+  background-color: $item-background;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  margin: 10px 0;
+  min-height: 80px;
+  border-radius: 40px;
+  box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.35);
+
+  &.checked {
+    background-color: $item-background-checked;
+    opacity: .6;
+    box-shadow: none;
+
+    .title {
+      text-decoration: line-through;
+    }
+  }
+
+  .title {
+    width: 60%;
+    word-break: break-word;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .description {
+    word-break: break-word;
+    display: flex;
+    align-items: flex-start;
+
+    font-size: .8rem;
+    color: #acadb0;
+    text-decoration: none!important;
+    margin-top: 5px;
+  }
+
+  .button-container {
+    text-align: right;
+    width: 30%;
+  }
+
+  &:hover {
+    &:not(.checked) {
+      background-color: $item-background-hover;
+    }
+    .delete-button {
+      display: inline-block!important;
+    }
+  }
+
+  .icon {
+    color: #acadb0;
+  }
+}
